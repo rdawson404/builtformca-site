@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1E40AF">
+
+  <title>BuiltForMCA — Software Built for the MCA Industry</title>
+  <meta name="description" content="A portfolio of software products built for merchant cash advance brokers and funders. DealHub, TrackMyCM, BlastWiz, Genie, and Deal Intake.">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://builtformca.com">
+  <meta property="og:title" content="BuiltForMCA — Software Built for the MCA Industry">
+  <meta property="og:description" content="A portfolio of software products built for merchant cash advance brokers and funders.">
+  <meta property="og:site_name" content="BuiltForMCA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BuiltForMCA — Software Built for the MCA Industry">
+  <meta name="twitter:description" content="A portfolio of software products built for merchant cash advance brokers and funders.">
+  <meta property="og:image" content="https://builtformca.com/og-image.png">
+  <meta property="twitter:image" content="https://builtformca.com/og-image.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --brand-primary: #1E40AF;
+      --brand-mid: #3B82F6;
+      --brand-light: #60A5FA;
+      --brand-text: #0F172A;
+      --brand-muted: #64748B;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, "SF Pro Display", "Inter", system-ui, sans-serif;
+      background: #ffffff;
+      background-image:
+        radial-gradient(circle at 15% 10%, rgba(59, 130, 246, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 85% 90%, rgba(30, 64, 175, 0.05) 0%, transparent 50%);
+      color: var(--brand-text);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 60px 40px;
+      display: flex; flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 60px; flex-wrap: wrap; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 20px; }
+    .brand-icon { width: 72px; height: 72px; border-radius: 16px; background: var(--brand-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .brand-text .name { font-size: 42px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+    .brand-text .name .for { color: var(--brand-primary); }
+    .brand-text .tag { font-size: 12px; font-weight: 600; color: var(--brand-muted); letter-spacing: 0.22em; margin-top: 10px; }
+    .url-pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--brand-text); color: #ffffff;
+      padding: 14px 24px; border-radius: 100px;
+      font-size: 16px; font-weight: 600; letter-spacing: -0.01em;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .url-pill:hover { transform: translateY(-1px); }
+    .url-pill .dot { width: 8px; height: 8px; border-radius: 50%; background: #10b981; box-shadow: 0 0 10px rgba(16, 185, 129, 0.6); }
+    .url-pill .arrow { color: var(--brand-light); margin-left: 2px; }
+
+    /* Section title */
+    .section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+    .section-header .line { flex: 1; height: 1px; background: linear-gradient(to right, #cbd5e1, transparent); }
+    .section-header .label { font-size: 13px; font-weight: 700; letter-spacing: 0.22em; color: var(--brand-muted); text-transform: uppercase; }
+    .section-header .count { background: #eff6ff; color: var(--brand-primary); font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 100px; letter-spacing: 0.05em; }
+
+    /* Products grid */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      flex: 1;
+    }
+    .product {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 28px 30px;
+      display: flex; flex-direction: column;
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .product:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(30, 64, 175, 0.12);
+      border-color: #cbd5e1;
+    }
+    .product::before {
+      content: '';
+      position: absolute; top: 0; left: 30px; right: 30px; height: 3px;
+      background: linear-gradient(to right, var(--brand-primary), var(--brand-light));
+      border-radius: 0 0 3px 3px;
+    }
+    .product .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 52px;
+      margin-bottom: 22px;
+      margin-top: 6px;
+    }
+    .product .logo-slot {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-height: 48px;
+      overflow: hidden;
+    }
+    .product .logo-slot img { max-height: 38px; width: auto; }
+    .product .logo-slot svg { max-height: 38px; width: auto; }
+    .product .arrow-btn {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: #f1f5f9; display: flex; align-items: center; justify-content: center;
+      color: var(--brand-muted); font-size: 14px; flex-shrink: 0;
+      transition: background 0.2s, color 0.2s;
+    }
+    .product:hover .arrow-btn { background: var(--brand-primary); color: white; }
+    .product .desc { font-size: 14px; font-weight: 500; color: var(--brand-muted); line-height: 1.55; margin-bottom: 22px; flex: 1; }
+    .product .url {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 600; color: var(--brand-primary);
+      padding-top: 16px; border-top: 1px solid #f1f5f9;
+      letter-spacing: -0.01em;
+    }
+    .product .url::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--brand-primary); }
+
+    /* Custom wordmarks */
+    .wordmark-tmcm { font-size: 24px; font-weight: 800; letter-spacing: -0.03em; color: var(--brand-text); }
+    .wordmark-genie {
+      font-size: 28px; font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #7c3aed, #ec4899);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .wordmark-intake { font-size: 24px; font-weight: 800; letter-spacing: -0.02em; color: var(--brand-text); }
+    .wordmark-intake .accent { color: #10b981; }
+
+    /* Footer */
+    .footer { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 28px; border-top: 1px solid #e2e8f0; flex-wrap: wrap; gap: 12px; }
+    .footer .left, .footer .right { font-size: 13px; color: #94a3b8; font-weight: 500; letter-spacing: 0.02em; }
+
+    /* Tablet */
+    @media (max-width: 1100px) {
+      .products { grid-template-columns: repeat(2, 1fr); }
+      .container { padding: 40px 24px; }
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      .container { padding: 32px 20px; }
+      .products { grid-template-columns: 1fr; gap: 16px; }
+      .brand-icon { width: 56px; height: 56px; border-radius: 12px; }
+      .brand-icon svg { width: 36px !important; height: 36px !important; }
+      .brand-text .name { font-size: 32px; }
+      .brand-text .tag { font-size: 11px; letter-spacing: 0.18em; }
+      .url-pill { font-size: 14px; padding: 12px 20px; }
+      .header { margin-bottom: 40px; }
+      .footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+  <div class="header">
+    <div class="brand">
+      <div class="brand-icon">
+        <svg width="52" height="52" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="26" width="12" height="12" rx="1.5" fill="#ffffff"/>
+          <rect x="14" y="26" width="12" height="12" rx="1.5" fill="#ffffff"/>
+          <rect x="28" y="26" width="12" height="12" rx="1.5" fill="#ffffff"/>
+          <rect x="0" y="13" width="12" height="12" rx="1.5" fill="#ffffff" opacity="0.75"/>
+          <rect x="14" y="13" width="12" height="12" rx="1.5" fill="#ffffff" opacity="0.75"/>
+          <rect x="0" y="0" width="12" height="12" rx="1.5" fill="#ffffff" opacity="0.55"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <div class="name">Built<span class="for">For</span>MCA</div>
+        <div class="tag">SOFTWARE FOR THE MCA INDUSTRY</div>
+      </div>
+    </div>
+    <div class="url-pill">
+      <span class="dot"></span>
+      builtformca.com
+      <span class="arrow">→</span>
+    </div>
+  </div>
+
+  <!-- Section header -->
+  <div class="section-header">
+    <div class="label">The Product Suite</div>
+    <div class="count">5 PRODUCTS</div>
+    <div class="line"></div>
+  </div>
+
+  <!-- Products grid -->
+  <div class="products">
+
+    <!-- DealHub — actual logo -->
+    <div class="product">
+      <div class="logo-row">
+        <div class="logo-slot">
+          <img src="data:image/webp;base64,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" alt="DealHub"/>
+        </div>
+        <div class="arrow-btn">↗</div>
+      </div>
+      <div class="desc">CRM companion for managing merchant files and sending deals to funders for offers.</div>
+      <div class="url">mcadealhub.com</div>
+    </div>
+
+    <!-- BlastWiz — actual logo -->
+    <div class="product">
+      <div class="logo-row">
+        <div class="logo-slot">
+          <svg xmlns="http://www.w3.org/2000/svg" width="220" height="44" viewBox="0 0 280 56" fill="none">
+  <!-- Lightning bolt icon -->
+  <g transform="translate(0, 4)">
+    <path d="M28 0L8 28h12L16 48l20-28H24L28 0z" fill="#0F172A"/>
+    <path d="M28 0L24 20h12L16 48l4-20H8L28 0z" fill="#3B82F6" opacity="0.9"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="52" y="40" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="36" fill="#0F172A" letter-spacing="-1.5">
+    Blast<tspan fill="#3B82F6">Wiz</tspan>
+  </text>
+</svg>
+
+        </div>
+        <div class="arrow-btn">↗</div>
+      </div>
+      <div class="desc">Text blast platform for sending SMS campaigns to leads and merchants at scale.</div>
+      <div class="url">blastwiz.com</div>
+    </div>
+
+    <!-- Genie — placeholder (magic sparkle) -->
+    <div class="product">
+      <div class="logo-row">
+        <div class="logo-slot">
+          <svg width="44" height="44" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="genieGrad" x1="0" y1="0" x2="40" y2="40">
+                <stop offset="0" stop-color="#7c3aed"/>
+                <stop offset="1" stop-color="#ec4899"/>
+              </linearGradient>
+            </defs>
+            <path d="M20 4l3.5 9.5L33 17l-9.5 3.5L20 30l-3.5-9.5L7 17l9.5-3.5L20 4z" fill="url(#genieGrad)"/>
+            <circle cx="30" cy="30" r="3" fill="url(#genieGrad)" opacity="0.7"/>
+            <circle cx="8" cy="32" r="2" fill="url(#genieGrad)" opacity="0.5"/>
+          </svg>
+          <span class="wordmark-genie">Genie</span>
+        </div>
+        <div class="arrow-btn">↗</div>
+      </div>
+      <div class="desc">Funder-facing deal management. Underwrite, offer, and fund from one platform.</div>
+      <div class="url">mcagenie.com</div>
+    </div>
+
+    <!-- TrackMyCM — actual favicon + wordmark -->
+    <div class="product">
+      <div class="logo-row">
+        <div class="logo-slot">
+          <svg width="44" height="44" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="44" height="44" rx="6" fill="#2563eb"/>
+  <circle cx="7" cy="22" r="3" fill="white"/>
+  <circle cx="16" cy="16" r="3" fill="white"/>
+  <circle cx="25" cy="9" r="3" fill="white"/>
+  <line x1="9.5" y1="20.5" x2="13.5" y2="18" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="18.5" y1="14.5" x2="22.5" y2="11" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+          <span class="wordmark-tmcm">TrackMyCM</span>
+        </div>
+        <div class="arrow-btn">↗</div>
+      </div>
+      <div class="desc">Commission tracking &amp; bank reconciliation for broker shops.</div>
+      <div class="url">trackmycm.com</div>
+    </div>
+
+    <!-- Deal Intake — placeholder (inbox arrow) -->
+    <div class="product">
+      <div class="logo-row">
+        <div class="logo-slot">
+          <svg width="44" height="44" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="9" fill="#10b981"/>
+            <path d="M12 20h16M20 12l8 8-8 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="wordmark-intake">Deal<span class="accent">Intake</span></span>
+        </div>
+        <div class="arrow-btn">↗</div>
+      </div>
+      <div class="desc">Streamlined merchant applications. Faster submissions, cleaner pipelines, and higher conversions.</div>
+      <div class="url">dealintakehq.com</div>
+    </div>
+
+    <!-- More coming card -->
+    <div class="product" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); border: none; color: white;">
+      <div class="logo-row">
+        <div class="logo-slot" style="color: white; font-size: 32px; font-weight: 800; letter-spacing: -0.02em;">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" style="background: rgba(255,255,255,0.15); border-radius: 12px; padding: 8px; box-sizing: border-box;">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+          <span>More</span>
+        </div>
+      </div>
+      <div class="desc" style="color: rgba(255,255,255,0.85);">We're always building. Follow along as the suite grows.</div>
+      <div class="url" style="color: white; border-top-color: rgba(255,255,255,0.2);">builtformca.com</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="left">© 2026 BuiltForMCA · All rights reserved</div>
+    <div class="right">The MCA industry's software portfolio</div>
+  </div>
+  </div>
+
+  <script>
+    // Make product cards clickable — links to each product's site
+    (function () {
+      const links = {
+        'mcadealhub.com': 'https://mcadealhub.com',
+        'blastwiz.com': 'https://blastwiz.com',
+        'mcagenie.com': 'https://mcagenie.com',
+        'trackmycm.com': 'https://www.trackmycm.com',
+        'dealintakehq.com': 'https://dealintakehq.com'
+      };
+      document.querySelectorAll('.product').forEach(card => {
+        const urlEl = card.querySelector('.url');
+        if (!urlEl) return;
+        const key = urlEl.textContent.trim();
+        const href = links[key];
+        if (!href) return;
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => window.open(href, '_blank', 'noopener'));
+      });
+    })();
+  </script>
+</body>
+</html>

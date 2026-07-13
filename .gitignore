@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# Vercel
+.vercel/
+
+# Env files
+.env*
+
+# Build artifact (index.html is copied into public/ at deploy time)
+public/index.html
