@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#1E40AF">
 
   <title>BuiltForMCA — Software Built for the MCA Industry</title>
-  <meta name="description" content="A portfolio of software products built for merchant cash advance brokers and funders. DealHub, TrackMyCM, BlastWiz, Genie, and Deal Intake.">
+  <meta name="description" content="A portfolio of software products built for merchant cash advance brokers and funders. DealHub, TrackMyCM, BlastWiz, and Genie.">
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
@@ -148,8 +148,6 @@
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    .wordmark-intake { font-size: 24px; font-weight: 800; letter-spacing: -0.02em; color: var(--brand-text); }
-    .wordmark-intake .accent { color: #10b981; }
 
     /* Footer */
     .footer { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 28px; border-top: 1px solid #e2e8f0; flex-wrap: wrap; gap: 12px; }
@@ -205,7 +203,7 @@
   <!-- Section header -->
   <div class="section-header">
     <div class="label">The Product Suite</div>
-    <div class="count">5 PRODUCTS</div>
+    <div class="count">4 PRODUCTS</div>
     <div class="line"></div>
   </div>
 
@@ -301,22 +299,6 @@
       <div class="url">trackmycm.com</div>
     </div>
 
-    <!-- Deal Intake — placeholder (inbox arrow) -->
-    <div class="product">
-      <div class="logo-row">
-        <div class="logo-slot">
-          <svg width="44" height="44" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="40" height="40" rx="9" fill="#10b981"/>
-            <path d="M12 20h16M20 12l8 8-8 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="wordmark-intake">Deal<span class="accent">Intake</span></span>
-        </div>
-        <div class="arrow-btn">↗</div>
-      </div>
-      <div class="desc">Streamlined merchant applications. Faster submissions, cleaner pipelines, and higher conversions.</div>
-      <div class="url">dealintakehq.com</div>
-    </div>
-
     <!-- More coming card -->
     <div class="product" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); border: none; color: white;">
       <div class="logo-row">
@@ -346,8 +328,7 @@
         'mcadealhub.com': 'https://mcadealhub.com',
         'blastwiz.com': 'https://blastwiz.com',
         'mcagenie.com': 'https://mcagenie.com',
-        'trackmycm.com': 'https://www.trackmycm.com',
-        'dealintakehq.com': 'https://dealintakehq.com'
+        'trackmycm.com': 'https://www.trackmycm.com'
       };
       document.querySelectorAll('.product').forEach(card => {
         const urlEl = card.querySelector('.url');

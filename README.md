@@ -1,7 +1,7 @@
 # builtformca-site
 
 Landing page for [builtformca.com](https://builtformca.com) — the BuiltForMCA brand portfolio,
-showcasing five SaaS products for the MCA industry: DealHub, BlastWiz, Genie, TrackMyCM, and Deal Intake.
+showcasing four SaaS products for the MCA industry: DealHub, BlastWiz, Genie, and TrackMyCM.
 
 ## Structure
 
