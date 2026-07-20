@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 56" fill="none">
+  <!-- Paper-plane send mark (deal routed broker -> lender) -->
+  <g transform="translate(4, 10)">
+    <!-- plane body -->
+    <path d="M2 18 L34 3 L25 35 L18 24 Z" fill="#1E3A8A"/>
+    <!-- folded wing (amber accent) -->
+    <path d="M34 3 L18 24 L25 35 Z" fill="#F59E0B"/>
+    <!-- trailing motion tick -->
+    <path d="M2 18 L18 24" stroke="#1E3A8A" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <!-- Wordmark: "Deal" navy, "Hub" amber -->
+  <text x="58" y="38" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="32" letter-spacing="-1.2">
+    <tspan fill="#1E3A8A">Deal</tspan><tspan fill="#F59E0B">Hub</tspan>
+  </text>
+</svg>
